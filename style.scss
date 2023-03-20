@@ -1,0 +1,170 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	font-family: "Roboto", sans-serif;
+	background-color: hsl(216, 12%, 8%);
+}
+
+section {
+	width: 90%;
+	max-width: 30rem;
+	border-radius: 8px;
+	padding: 1em;
+	background-color: hsl(213, 19%, 18%);
+}
+
+.section-main {
+	img {
+		padding: 0.8em;
+		border-radius: 50%;
+		background-color: hsl(213, 17%, 25%);
+	}
+
+	.section-text {
+		h1 {
+			padding: 0.7em 0 0.7em 0;
+			color: hsl(0, 8%, 92%);
+		}
+
+		p {
+			padding-bottom: 0.7em;
+			color: hsl(214, 6%, 56%);
+			line-height: 1.5em;
+		}
+	}
+
+	.section-states {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 0.7em;
+
+		button {
+			cursor: pointer;
+			width: 3em;
+			height: 3em;
+			margin: 0.2em;
+			padding: 0.8em;
+			border-radius: 50%;
+			border: none;
+			color: hsl(214, 6%, 56%);
+			font-weight: bold;
+			background-color: hsl(213, 17%, 25%);
+		}
+
+		button:hover,
+		button:focus {
+			color: hsl(0, 8%, 92%);
+			background-color: hsl(25, 97%, 53%);
+		}
+	}
+	.submit {
+		display: flex;
+		justify-content: center;
+		margin: 1em 0 1em 0;
+		button {
+			cursor: pointer;
+			color: hsl(0, 8%, 92%);
+			background-color: hsl(25, 97%, 53%);
+			border: none;
+			padding: 1em;
+			width: 90%;
+			border-radius: 18px;
+			text-transform: uppercase;
+			font-weight: bold;
+			letter-spacing: 0.2em;
+		}
+
+		button:hover {
+			background-color: hsl(0, 8%, 92%);
+			color: hsl(25, 97%, 53%);
+		}
+	}
+}
+
+.section-secondary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	display: none;
+
+	img {
+		padding: 1.5em;
+	}
+
+	.selected {
+		padding: 1em;
+		color: hsl(25, 97%, 53%);
+		background-color: hsl(213, 17%, 25%);
+		border-radius: 20px;
+	}
+
+	.section-text {
+		display: flex;
+		flex-direction: column;
+		padding: 1em;
+		justify-content: center;
+		align-items: center;
+
+		h1 {
+			color: hsl(0, 8%, 92%);
+		}
+
+		p {
+			color: hsl(214, 6%, 56%);
+			line-height: 1.5em;
+			padding: 0.8em;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.section-main {
+		border-radius: 18px;
+		padding: 2em;
+		height: 30rem;
+
+		.section-text {
+			p {
+				padding-bottom: 1.5em;
+			}
+		}
+
+		.section-states {
+			padding-bottom: 1.5em;
+
+			button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 2em;
+				margin: 0 1em 0 1em;
+			}
+		}
+		.submit {
+			button {
+				padding: 1.5em;
+				width: 90%;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.active {
+	display: flex;
+}
+
+.hidden {
+	display: none;
+}
